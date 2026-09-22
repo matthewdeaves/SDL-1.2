@@ -42,7 +42,21 @@ Its members have **different sources**:
 
 | Branch | Base | Commits on top | Status |
 |---|---|---|---|
-| `retro/panther-ppc` | `release-1.2.15` (`457d4e55`) | tarball's generated build files; `retro/build-ppc-panther.sh` (the quakespasm recipe); cherry-pick of upstream `61074e09` (SDL#5: 1.2.15 rejects non-32-bpp desktops) | building and testing, not yet tagged |
+| `retro/panther-ppc` | `release-1.2.15` (`457d4e55`) | tarball's generated build files; `retro/build-ppc-panther.sh` (the quakespasm recipe); cherry-pick of upstream `61074e09` (SDL#5: 1.2.15 rejects non-32-bpp desktops) | **canonical** for the ppc/10.3 floor |
+
+Tags:
+
+- `retro/panther-ppc-base` (`1b8e15ae`): rebuilds the slice the fleet
+  ships today **byte-identically** (sha256 `d92222069edfefc9…`; SDL#4).
+- `retro/panther-ppc-sdl5-fix` (`d298f453`): base plus `61074e09`. Built
+  slice sha256 `07cc046e76f0e71a82434cc5f23a402a1e7cc2a4383baa11c8c3553aac554401`.
+  Tested on yosemite (G3, 10.3.9, 2026-09-22) with Quake II: the shipped
+  slice fails at 16 bpp with `Couldn't init SDL video: Unsupported display
+  mode`, and this one passes the timedemo at both 16 and 32 bpp (SDL#5).
+
+Both slices audit identically at the 10.3 floor: 195 hard imports, all
+present in 10.3.9. `_CGBitmapContextCreateImage` is missing from the SDK
+headers but exported by Panther's real CoreGraphics.
 
 The Intel slices have no branch yet: upstream QuakeSpasm's build is already
 a newer SDL-1.2 than 1.2.15 and already contains `61074e09`.
