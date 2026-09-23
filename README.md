@@ -1,3 +1,5 @@
+> **This fork:** `retro/panther-ppc` holds the pinned SDL 1.2 PowerPC build (Mac OS X 10.3+) for old-mac Quake ports. See [RETRO.md](RETRO.md). `main` tracks upstream.
+
 
 # DEPRECATED
 
