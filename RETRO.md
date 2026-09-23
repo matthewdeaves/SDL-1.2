@@ -12,7 +12,7 @@ fork, [matthewdeaves/SDL](https://github.com/matthewdeaves/SDL).
 
 The [release](https://github.com/matthewdeaves/SDL-1.2/releases) of
 `retro/panther-ppc-sdl5-fix` carries the built ppc slice, `SHA256SUMS`, and
-`setdepth-ppc`, a small display-depth switcher used for the 16-bpp test.
+`setdepth-ppc`, the display-depth switcher used for the 16-bpp test.
 
 The ports' other slices don't come from this fork. x86_64 and i386 come from
 upstream QuakeSpasm's SDL-1.2 build, which already includes `61074e09`.
@@ -24,4 +24,4 @@ Build (on a 10.7 Intel Mac with the 10.3.9 SDK):
 matthewdeaves/SDL.
 
 SDL 1.2 is LGPL 2.1 (`COPYING`); the ports load it as a separate dynamic
-library. Nothing here is sent upstream.
+library.
