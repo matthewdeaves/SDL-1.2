@@ -23,5 +23,4 @@ Build (on a 10.7 Intel Mac with the 10.3.9 SDK):
 `scripts/weak-link-audit.sh <slice> 10.3 <MacOSX10.3.9.sdk>` from
 matthewdeaves/SDL.
 
-SDL 1.2 is LGPL 2.1 (`COPYING`); the ports load it as a separate dynamic
-library.
+SDL 1.2 is LGPL 2.1 (`COPYING`); the ports load it as a separate dylib.
